@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	<title>Parque Cientifico y Tecnologico</title>
+
+  <link rel="stylesheet" type="text/css" href="/static/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/materialize.mi.css">
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="http://www.uaeh.edu.mx/css/style-uaeh-internas_ex.css"> 
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     
+
+
+</head>
+<body>
+
+
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="{%url 'antecedentes'%}">Antecedentes</a></li>
+  <li><a href="{%url 'funciones'%}">Funciones</a></li>
+  <li><a href="{%url 'mision'%}">Misión y Visión</a></li>
+  <li><a href="{%url 'objetivo'%}">Objetivo</a></li>
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="{%url 'ope'%}">Manual de Operaciones PCyT</a></li>
+  <li><a href="{%url 'pro'%}">Manual de Procedimientos PCyT</a></li>
+  <li><a href="{%url 'idef'%}">Matriz de Identificación PCyT</a></li>
+  <li><a href="{%url 'organi'%}">Organigrama</a></li>
+</ul>
+
+ <nav class="red darken-4 hoverable">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="{%url 'con'%}" class="brand-logo"><img src="/static/pcyt.png" width="100" height="63"></a>
+      <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-downs">
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Quienes somos<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="https://www.uaeh.edu.mx/pcyt/ot/" target="_blank">OT</a></li>
+        <li><a href="{%url 'planta'%}">Planta Piloto</a></li>
+        <li><a href="{%url 'noti'%}">Noticias</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Documentos Administrativos<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="{%url 'contacto'%}">Contacto</a></li>
+        
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+      <li><a href="{%url 'antecedentes'%}">Antecedentes</a></li>
+      <li><a href="{%url 'funciones'%}">Funciones</a></li>
+      <li><a href="{%url 'mision'%}">Misión y Visión</a></li>
+      <li><a href="{%url 'objetivo'%}">Objetivo</a></li>
+      <li><a href="https://www.uaeh.edu.mx/pcyt/ot/" target="_blank">OT</a></li>
+      <li><a href="{%url 'planta'%}">Planta Piloto</a></li>
+      <li><a href="{%url 'noti'%}">Noticias</a></li>
+      <li><a href="{%url 'ope'%}">Manual de Operaciones PCyT</a></li>
+      <li><a href="{%url 'pro'%}">Manual de Procedimientos PCyT</a></li>
+      <li><a href="{%url 'idef'%}">Matriz de Identificación PCyT</a></li>
+      <li><a href="{%url 'organi'%}">Organigrama</a></li>
+      <li><a href="{%url 'contacto'%}">Contacto</a></li>
+
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+	
+    {% block content %}
+	{% endblock content %}
+
+
+
+
+
+
+
+
+
+ <footer class="page-footer red darken-4 hoverable">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                
+                <span class="soc fa-stack fa-lg">
+                <a href="https://www.facebook.com/UAEH.edu/?fref=ts" class="soc">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse f-style"></i>
+                </a>
+                </span>
+                
+                <span class="soc fa-stack fa-lg">
+    <a href="https://twitter.com/UAEH_OFICIAL" class="soc">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-twitter fa-stack-1x fa-inverse f-style"></i>
+    </a>
+    </span>
+    <span class="soc fa-stack fa-lg">
+    <a href="https://www.instagram.com/uaeh_comsoc/" class="soc">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-instagram fa-stack-1x fa-inverse f-style"></i>
+    </a>
+    </span>
+    <span class="soc fa-stack fa-lg">
+    <a href="https://www.youtube.com/user/uaehcomsoc" class="soc">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-youtube fa-stack-1x fa-inverse f-style"></i>
+    </a>
+    </span>
+     <span class="soc fa-stack fa-lg">
+    <a href="https://es.linkedin.com/edu/universidad-aut%C3%B3noma-del-estado-de-hidalgo-15080" class="soc">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-linkedin fa-stack-1x fa-inverse f-style"></i>
+    </a>
+    </span>  
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright PCYT
+            <a class="grey-text text-lighten-4 right" href="#!">Parque Científico y Tecnológico</a>
+            </div>
+          </div>
+        </footer>
+            
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script type="/static/js/jquery.js"></script>
+<script type="/static/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".button-collapse").sideNav();
+   $('.carousel').carousel();
+   $('.slider').slider({full_width: true});
+});
+</script>
+
+</body>
+</html>

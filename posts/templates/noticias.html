@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block content%}
+
+
+
+{%for post in posts%}
+
+	<a href="{{post.get_absolute_url}}"><h2>{{post.titulo}}</h2></a>
+
+
+{%endfor%}
+{%endblock content%}
