@@ -1,12 +1,15 @@
 {%extends 'base.html'%}
 {%block content%}
 
+<div class="container">
+
 
 
 {%for post in posts%}
-
-	<a href="{{post.get_absolute_url}}"><h2>{{post.titulo}}</h2></a>
+<a href="{{post.get_absolute_url}}">
+  <h2>{{post.titulo}}</h2>
 
 
 {%endfor%}
+</div>
 {%endblock content%}

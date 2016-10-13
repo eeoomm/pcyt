@@ -2,8 +2,10 @@ from django.conf.urls import url
 from django.contrib import admin
 from posts import views 
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^noticias/(?P<slug>[-\w]+)/$', views.DetailView.as_view(), name="detalle"),
     url(r'^noticias/', views.NotiView.as_view(), name="noti"),
     url(r'^pcyt/', views.ListView.as_view(), name="con"),
     url(r'^planta/', views.List2View.as_view(), name="planta"),

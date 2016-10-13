@@ -15,4 +15,4 @@ class Post(models.Model):
 		return self.titulo
 
 	def get_absolute_url(self):
-		return reverse('noti',args=[self.slug])
+		return reverse('detalle',args=[self.slug])

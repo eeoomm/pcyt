@@ -6,6 +6,29 @@ from django.utils.text import slugify
 
 # Create your views here.
 
+class NotiView(View):
+	def get(self,request):
+		template_name ='noticias.html'
+		posts = Post.objects.all()
+		context={
+			'posts':posts
+		}
+		return render (request,template_name,context)
+
+
+class DetailView(View):
+	def get(self,request,slug):
+		template_name = 'detalle.html'
+		post = Post.objects.get(slug=slug)
+		
+		context = {
+		'post':post,
+		
+
+	}
+		return render(request,template_name,context)
+		
+
 class ListView(View):
 	def get(self,request):
 		template_name = 'con.html'
@@ -65,14 +88,3 @@ class ObjetivoView(View):
 		template_name = 'obje.html'
 		return render(request,template_name)
 
-class NotiView(View):
-	def get(self,request):
-		template_name ='noticias.html'
-		posts = Post.objects.all()
-		context={
-			'posts':posts
-		}
-		return render (request,template_name,context)
-
-
-		
